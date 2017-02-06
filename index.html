@@ -20,11 +20,11 @@
 		<!--jquery cdn - to make AJAX call to API-->
 		<script  src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
 
-		<!--JS here-->
-		<script type="text/javascript" src="scripts/app.js"></script>
+
 	</head>
 
 	<body>
+		<!--making sure our logic from app.js is running...-->
 		<div ng-controller="DemoCtrl">
 
 
@@ -38,12 +38,29 @@
 
 			</div>
 			
+			<md-input-container>
+				<label>Beer Name</label>
+				<input id="inputName" type="text">
+				<a href="#"><button id="searchBtnName">Search by name</button></a>
+			</md-input-container>
+			<md-input-container>
+				<label>ABV</label>
+				<input id="inputAbv" type="number">
+				<a href="#"><button id="searchBtnAbv">Search by ABV</button></a>
+			</md-input-container>
+
+			<div class="searchedBeer"></div>
+
 			<div class="beer" ng-app="webapp">Beers go here:
 				<div id="beerLabels"></div>
 			</div>
 
 
 		</div>
+
+
+				<!--JS here-->
+		<script type="text/javascript" src="scripts/app.js"></script>
 	</body>
 	
 </html>

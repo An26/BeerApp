@@ -15,9 +15,9 @@
 		<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular-resource.js"></script>
 
 		<!-- Latest compiled and minified CSS -->
-		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+		<!--<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">-->
 
-		<link href="https://fonts.googleapis.com/css?family=Merriweather|Raleway" rel="stylesheet">
+		<!--<link href="https://fonts.googleapis.com/css?family=Merriweather|Raleway" rel="stylesheet">-->
 
 		<!--local stylesheet-->
 		<link rel="stylesheet" href="scripts/styles.css">
@@ -32,27 +32,26 @@
 		<!--making sure our logic from app.js is running...-->
 		<div ng-controller="DemoCtrl">
 
-
 			<!-- Code Here -->
 
-			<h1>PenPal Schools Beer Works</h1>
+			<h1 class="md-display-3">Beer Works App</h1>
 			<div class="container">
-				<div class="row">
-					<div class="col-md-4"><img src="./images/buzz_beer_big.jpg" alt="" height="200px" width="auto"></div>
-					<div class="col-md-4"><img src="./images/pilsenLager.jpg" alt="" height="200px" width="auto" ></div>
-					<div class="col-md-4"><img src="./images/trashyBlonde.jpg" alt="" height="200px" width="auto"></div>
+				<div layout="row">
+					<div flex><img src="./images/buzz_beer_big.jpg" alt="" height="200px" width="auto"></div>
+					<div flex><img src="./images/pilsenLager.jpg" alt="" height="200px" width="auto" ></div>
+					<div flex><img src="./images/trashyBlonde.jpg" alt="" height="200px" width="auto"></div>
 				</div>
 			</div>
-
+			
 			<md-input-container>
-				<label>Beer Name</label>
+				<label>Search by Beer Name</label>
 				<input id="inputName" type="text">
-				<a href="#"><button id="searchBtnName">Search by name</button></a>
+				<button class="md-primary" id="searchBtnName">Search name</button>
 			</md-input-container>
 			<md-input-container>
-				<label>ABV</label>
+				<label>Search by Beer ABV from 4.1 - 55.0%</label>
 				<input id="inputAbv" type="number">
-				<a href="#"><button id="searchBtnAbv">Search by ABV</button></a>
+				<button class="md-primary" id="searchBtnAbv">Search %</button>
 			</md-input-container>
 
 			<div class="beerInfo">
@@ -60,15 +59,13 @@
 				<div class="searchedBeer"></div>
 			</div>
 
-			<div class="beer" ng-app="webapp">Beers go here:
+			<div class="beer" ng-app="webapp">Availible Beers:
 				<div id="beerLabels"></div>
 			</div>
-
-
 		</div>
 
 
-				<!--JS here-->
+		<!--JS here-->
 		<script type="text/javascript" src="scripts/app.js"></script>
 	</body>
 	

@@ -1,7 +1,25 @@
 body {
-    background-color: #e3f2fd;
+    /*background-color: #e3f2fd;*/
+    font-family: 'Raleway', sans-serif;
 }
 
 div {
     padding: 15px;
+}
+
+h1 {
+    font-family: 'Merriweather', serif;
+    text-align: center;
+}
+
+.singleBeer {
+    display: inline-block;
+}
+
+.beerInfo {
+    border: 5px black solid;
+}
+
+.beerImgs img{
+    align: center;
 }
